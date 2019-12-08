@@ -1,4 +1,4 @@
-import time,traceback,builtins
+import time,traceback,builtins,os
 from watson import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -40,8 +40,9 @@ def get_chat(driver,pane,prevChat=None):
 
 
 def main():
-	firefoxProfile = webdriver.FirefoxProfile()
+	firefoxProfile = webdriver.FirefoxProfile(os.path.join(os.getcwd(),'firefoxProfile'))
 	firefoxProfile.set_preference("browser.sessionstore.restore_on_demand", False)
+	firefoxProfile.set_preference('browser.download.dir', os.getcwd())
 	message_queue = []
 	delay=2
 	driver = webdriver.Firefox(firefox_profile=firefoxProfile)

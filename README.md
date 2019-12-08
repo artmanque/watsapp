@@ -4,11 +4,11 @@ A simple Whatsapp chatbot that chats with any person and responds via watson API
 <br>
 
 ## Dependencies
-You will require a recent version of Google Chrome and the drivers. The drivers are included in the `drivers` directory of this project.<br>
+You will require a recent version of Firefox and the drivers. The drivers are included in the `drivers` directory of this project.<br>
 To run the following python script you will need the [Selenium Webdriver](https://pypi.python.org/pypi/selenium) for Python
 
 ``pip3 install selenium``
-
+``pip3 install --upgrade ibm-watson``
 
 
 <br>
