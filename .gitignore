@@ -1,0 +1,10 @@
+test/*
+test
+data
+data/*
+venv3/*
+.vs/
+init
+*.pyproj
+*.suo
+*.ini
