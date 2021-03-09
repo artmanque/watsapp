@@ -2,11 +2,12 @@ import json,traceback
 from ibm_watson import AssistantV2
 from ibm_watson import ApiException
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+import os
 
 version='2019-02-28'
-apikey='fSPShoOagNLuq7iOliHlSHbwMinNgIJIVAy7uycnYbA0'
-service_url='https://gateway-lon.watsonplatform.net/assistant/api'
-assistant_id='446a1982-63d0-443b-926d-3acd2fc25f03'
+apikey=os.environ.get('WATSON_API_KEY')
+service_url=os.environ.get('WATSON_API_URL')
+assistant_id=os.environ.get('WATSON_ASSISTANT_ID')
 # In your API endpoint use this to generate new bearer tokens
 # iam_token_manager = IAMTokenManager(apikey=apikey)
 # token = iam_token_manager.get_token()
